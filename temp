@@ -1,0 +1,14 @@
+				write(sockfd, "Please enter your account number:\n", sizeof("Please enter your account number:\n")); 
+				n = read(sockfd, buf, MAXLINE);
+				buf[n] = 0; // null terminate the buffer
+				if (strstr(buf, "123"))
+				{
+					write(sockfd, "Hello, Nathan\n", sizeof("Hello, Nathan\n")); 
+					n = read(sockfd, buf, MAXLINE);
+					buf[n] = 0; // null terminate the buffer
+					if (strstr(buf, "deposit"))
+					{
+						write(sockfd, "How much to deposit?:\n", sizeof("How much to deposit?:\n")); 
+					}
+				}
+
